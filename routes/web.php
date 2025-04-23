@@ -14,3 +14,4 @@ Route::resource('car',CarController::class);
 
 Route::get('/signup',[SignupController::class,'create'])->name('signup');
 Route::get('/login',[LoginController::class,'create'])->name('login');
+
