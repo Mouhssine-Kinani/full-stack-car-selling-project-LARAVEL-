@@ -1,5 +1,5 @@
 
-<x-guest-layout bodyClass="page-login" title="login">
+<x-guest-layout bodyClass="page-login" title="Login">
 
   <form action="" method="post">
     <div class="form-group">
@@ -16,14 +16,14 @@
 
     <button class="btn btn-primary btn-login w-full">Login</button>
 
-   
-    
+
+
     <x-slot:footerLink>
     Don't have an account? -
     <a href="/signup"> Click here to create one</a>
 
   </x-slot:footerLink>
-  
+
 
   </form>
 
