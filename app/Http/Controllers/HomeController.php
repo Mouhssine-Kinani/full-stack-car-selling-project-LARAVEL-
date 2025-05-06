@@ -9,6 +9,7 @@ use App\Models\CarType;
 use App\Models\CarImage;
 use App\Models\FuelType;
 use App\Models\CarFeatures;
+use App\Models\Model;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -16,17 +17,11 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // $maker = Maker::factory()->count(3)->create();
-        // dd($maker);
 
-        // $users = User::factory()->count(3)->make([
-        //     "name" => 'simo'
-        // ]);
-        $users = User::factory()
-        ->count(4)
-        ->sequence(fn($sequence)=>['name'=>'userName'.$sequence->index])
-        ->create();
-        dd($users);
+        // User::factory()
+        // ->has(Car::factory()->count(5), "favouriteCars")
+        // ->create();
+
 
         return view('home.index');
     }
@@ -187,3 +182,30 @@ class HomeController extends Controller
 // $user = User::find(1);
 // // dd($user->favouriteCars);
 // $user->favouriteCars()->attach([1]); // add to favourite car for a user
+
+
+
+
+// $maker = Maker::factory()->count(3)->create();
+        // dd($maker);
+
+        // $users = User::factory()->count(3)->make([
+        //     "name" => 'simo'
+        // ]);
+        // $users = User::factory()
+        // ->count(2)
+        // ->unverified()
+        // ->create();
+        // dd($users);
+
+
+        // Maker::factory()
+        // ->count(5)
+        // // ->hasModels(4)
+        // ->has(Model::factory()->count(4) , "models")
+        // ->create();
+
+        // Model::factory()
+        //     ->count(5)
+        //     ->forMaker(['name'=>"lexus"])
+        //     ->create();
