@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -47,7 +46,7 @@ class Car extends Model
     }
     public function model(): BelongsTo
     {
-        return $this->belongsTo(Model::class);
+        return $this->belongsTo(\App\Models\Model::class);
     }
     public function owner(): BelongsTo
     {
@@ -57,7 +56,7 @@ class Car extends Model
     {
         return $this->belongsTo(City::class);
     }
-    
+
     public function favouredUsers(): BelongsToMany
     {
         return $this->belongsToMany(User::class, "favourite_cars", "car_id", "user_id");
