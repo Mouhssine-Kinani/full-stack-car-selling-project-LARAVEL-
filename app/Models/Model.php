@@ -10,9 +10,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Model extends EloquentModel
 {
     use HasFactory;
-    //
+    
     // protected $table = 'models';
-    public $timestamps = false ;
+    public $timestamps = false;
     protected $fillable = [
         'name',
         'maker_id'

@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class CarFeatures extends Model
 {
-    //
-    public $timestamps = false ;
+    use HasFactory;
+    
+    public $timestamps = false;
     protected $primaryKey = 'car_id';
     protected $fillable = [
         'car_id',
