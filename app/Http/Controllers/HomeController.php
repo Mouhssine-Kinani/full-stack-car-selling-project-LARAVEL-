@@ -17,12 +17,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-
-        // User::factory()
-        // ->has(Car::factory()->count(5), "favouriteCars")
-        // ->create();
-
-
         return view('home.index');
     }
 }
@@ -209,3 +203,8 @@ class HomeController extends Controller
         //     ->count(5)
         //     ->forMaker(['name'=>"lexus"])
         //     ->create();
+
+
+        // User::factory()
+        // ->has(Car::factory()->count(5), "favouriteCars")
+        // ->create();
