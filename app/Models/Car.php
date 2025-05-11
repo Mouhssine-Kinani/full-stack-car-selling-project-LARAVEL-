@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -74,5 +75,9 @@ class Car extends Model
     public function images(): HasMany
     {
         return $this->hasMany(CarImage::class);
+    }
+    public function getCreateDate():string
+    {
+        return (new Carbon($this->created_at))->format('d/m/Y');
     }
 }
