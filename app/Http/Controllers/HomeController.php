@@ -19,6 +19,7 @@ class HomeController extends Controller
     {
         // select published cars
         $cars = Car::where('published_at', '<', now() )
+        ->with(['primaryImage','city', "maker", 'model', 'carType', 'fuelType'])
         ->orderBy('published_at','desc')
         ->limit(30)
         ->get();
